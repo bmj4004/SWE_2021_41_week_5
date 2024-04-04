@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cd ./files
+
+for test in {a..z}
+do 
+    ls | grep -i ^$test | xargs -I {} mv {} ../$test
+done
